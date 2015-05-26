@@ -5,7 +5,7 @@ lib = "#{root}/lib"
 $:.unshift lib unless $:.include?(lib)
 
 Gem::Specification.new do |s|
-  s.name        = "br-smart_asset"
+  s.name        = "smart_asset_br"
   s.version     = '0.6.1'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Winton Welsh"]
