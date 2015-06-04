@@ -75,7 +75,7 @@ class SmartAsset
             puts "\nCreating #{package}..."
             warning = ENV['WARN'] ? " -v" : nil
             
-            @bin = File.expand_path(File.dirname(__FILE__) + "../node_modules/.bin/") + "/"
+            @bin = File.expand_path(File.dirname(__FILE__) + "/../node_modules/.bin/") + "/"
               
             # Ignore npm binary path for now
             # unless @bin
