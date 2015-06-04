@@ -74,11 +74,14 @@ class SmartAsset
             File.open(tmp, 'w') { |f| f.write(data) }
             puts "\nCreating #{package}..."
             warning = ENV['WARN'] ? " -v" : nil
-             
-            unless @bin
-              @bin = Dir.chdir(@root) { `npm bin`.strip }
-              @bin = File.directory?(@bin) ? "#{@bin}/" : nil
-            end
+            
+            @bin = File.expand_path(File.dirname(__FILE__) + "../node_modules/.bin/") + "/"
+              
+            # Ignore npm binary path for now
+            # unless @bin
+            #   @bin = Dir.chdir(@root) { `npm bin`.strip }
+            #   @bin = File.directory?(@bin) ? "#{@bin}/" : nil
+            # end
             
             if ext == 'js'
               cmd = "#{@bin}uglifyjs --output #{package}#{warning} #{tmp}"
