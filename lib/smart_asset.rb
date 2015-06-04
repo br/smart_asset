@@ -75,7 +75,7 @@ class SmartAsset
             puts "\nCreating #{package}..."
             warning = ENV['WARN'] ? " -v" : nil
             
-            @bin = File.expand_path(File.dirname(__FILE__) + "/..") + "/"
+            @bin = File.expand_path(File.dirname(__FILE__) + "/../node_modules") + "/"
               
             # Ignore npm binary path for now
             # unless @bin
@@ -84,9 +84,9 @@ class SmartAsset
             # end
             
             if ext == 'js'
-              cmd = "#{@bin}uglifyjs --output #{package}#{warning} #{tmp}"
+              cmd = "#{@bin}uglify-js/bin/uglifyjs --output #{package}#{warning} #{tmp}"
             elsif ext == 'css'
-              cmd = "#{@bin}cleancss --skip-advanced #{tmp} -o #{package}"
+              cmd = "#{@bin}clean-css/bin/cleancss --skip-advanced #{tmp} -o #{package}"
             end
 
             puts cmd if ENV['DEBUG']
