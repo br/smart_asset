@@ -2,7 +2,9 @@
 *.gem
 .bundle
 Gemfile.lock
-node_modules
+node_modules/*
+!node_modules/uglify-js
+!node_modules/clean-css
 pkg
 spec/fixtures/assets/*/.change.yml
 spec/fixtures/assets/compressed
