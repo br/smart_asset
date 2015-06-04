@@ -3,6 +3,7 @@
 .bundle
 Gemfile.lock
 node_modules/*
+!node_modules/.bin
 !node_modules/uglify-js
 !node_modules/clean-css
 pkg

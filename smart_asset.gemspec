@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.name        = "smart_asset_br"
   s.version     = '0.6.1'
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Winton Welsh"]
-  s.email       = ["mail@wintoni.us"]
+  s.authors     = ["Bleacher Report"]
+  s.email       = ["ops@bleacherreport.com"]
   s.homepage    = "http://github.com/br/smart_asset"
   s.summary     = %q{Smart asset packaging for Rails, Sinatra, and Stasis}
   s.description = %q{Smart asset packaging for Rails, Sinatra, and Stasis.}
