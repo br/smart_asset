@@ -116,6 +116,14 @@ class SmartAsset
       end
     end
 
+    def get_asset_host
+      if RAILS_ENV == "development" || config['force_local']
+        ActionController::Base.asset_host rescue nil
+      else
+        @config['s3_host']
+      end
+    end
+
     def load_config(root, relative_config=nil)
       relative_config ||= 'config/assets.yml'
       @root = File.expand_path(root)
@@ -134,7 +142,7 @@ class SmartAsset
       end
 
       @config['asset_host_count'] ||= 4
-      @config['asset_host'] ||= ActionController::Base.asset_host rescue nil
+      @config['asset_host'] ||= get_asset_host
       @config['environments'] ||= %w(production)
       @config['public'] ||= 'public'
 

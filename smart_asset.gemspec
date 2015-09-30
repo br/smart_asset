@@ -6,7 +6,7 @@ $:.unshift lib unless $:.include?(lib)
 
 Gem::Specification.new do |s|
   s.name        = "smart_asset_br"
-  s.version     = '0.6.7'
+  s.version     = '0.6.8'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Bleacher Report"]
   s.email       = ["ops@bleacherreport.com"]
